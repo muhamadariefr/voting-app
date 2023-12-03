@@ -14,12 +14,20 @@ const NavbarComponent = () => {
     }
   };
 
+  const logoutBtnUser = () => {
+    localStorage.removeItem('keyLogin');
+  }
+
+  let keyLogin;
+  keyLogin = JSON.parse(localStorage.getItem('keyLogin'));
+  console.log(keyLogin);
+
   useEffect(() => {
     changeBackgroundColor();
-
     window.addEventListener("scroll", changeBackgroundColor);
+    
   });
-
+  
   let navigate = useNavigate();
 
   return (
@@ -27,7 +35,7 @@ const NavbarComponent = () => {
       <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
         <Container>
           <Navbar.Brand href="#home" className="fs-4 fw-bold">
-          <i class="fa-solid fa-box-archive pe-2"></i>Voting
+          <i className="fa-solid fa-box-archive pe-2"></i>Voting
             <span className="text-primary">App</span>
           </Navbar.Brand>
           <Navbar.Toggle
@@ -43,7 +51,7 @@ const NavbarComponent = () => {
                       to={link.path}
                       className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
-                      }
+                      } 
                       end
                     >
                       {link.text}
@@ -52,7 +60,7 @@ const NavbarComponent = () => {
                 );
               })}
             </Nav>
-            <div className="text-center">
+            <div className={keyLogin == 1 ? "d-none text-center" : "text-center" }>
               <button
                 className="btn btn-outline-primary rounded-5"
                 onClick={() => navigate("/login")}
@@ -60,6 +68,14 @@ const NavbarComponent = () => {
                 Login/Register
               </button>
             </div>
+            <Nav className={keyLogin == 1 ? "ms-auto d-flex flex-row align-items-center justify-content-center" : "d-none"}>
+              <Nav.Link href="#" className="p-2" onClick={logoutBtnUser}>
+                <img src="/profile.png" alt="" width={30}/>
+              </Nav.Link>
+              <Nav.Link href="/login" className="p-2" onClick={logoutBtnUser}>
+                <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>

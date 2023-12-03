@@ -31,7 +31,7 @@ function Sidebar({value}) {
     return ( 
 
 
-        <div className="d-flex justify-content-between flex-column bg-dark text-white py-3 ps-3 pe-4 vh-100 sidebar-adm">
+        <div className="d-flex justify-content-between flex-column bg-dark text-white py-3 ps-3 pe-3 vh-100 sidebar-adm">
             <div>
                 <a href="" className="p-3 fs-4 fw-bold">
                     <i className="fa-solid fa-dragon px-2"></i>
