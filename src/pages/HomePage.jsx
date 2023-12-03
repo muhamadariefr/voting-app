@@ -15,6 +15,8 @@ import { Pagination } from "swiper/modules";
 const HomePage = () => {
   let navigate = useNavigate();
 
+   
+
   return (
     <div className="homepage">
       <header className="w-100 min-vh-100 d-flex align-items-center">

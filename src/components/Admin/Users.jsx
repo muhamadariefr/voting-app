@@ -25,7 +25,7 @@ function Users() {
   return (
     <div className="d-flex">
       <div className="d-flex">
-        <div className={toggle ? "d-none" : "w-auto position-fixed"}>
+        <div className={toggle ? "d-none" : "w-auto position-fixed"} style={{zIndex: 1}}>
           <Sidebar value="2" />
         </div>
         <div className={toggle ? "d-none" : "invisible"}>

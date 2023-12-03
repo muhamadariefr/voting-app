@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function NavAdm({ Toggle }) {
   return (
-    <Navbar expand="lg" className="bg-dark navbar-dark">
+    <Navbar expand="lg" className="bg-dark navbar-dark" style={{zIndex: 1}}>
       <Container>
         <Navbar.Brand href="#home" className="d-none d-md-block">Dashboard</Navbar.Brand>
         <Navbar.Brand
