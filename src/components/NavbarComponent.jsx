@@ -26,8 +26,8 @@ const NavbarComponent = () => {
     <div className="navbar-home">
       <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
         <Container>
-          <Navbar.Brand href="#home" className="fs-3 fw-bold">
-            <i class="fa-solid fa-dragon px-2"></i>Voting
+          <Navbar.Brand href="#home" className="fs-4 fw-bold">
+          <i class="fa-solid fa-box-archive pe-2"></i>Voting
             <span className="text-primary">App</span>
           </Navbar.Brand>
           <Navbar.Toggle

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Modal, Button } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
 import { semuakandidat } from "../data/index";
 import Faq from "../components/FaqComponent";
 
@@ -56,19 +56,34 @@ const SecondPage = () => {
                     <p className="m-0 text-primary fw-bold">
                       {kandidat.partai}
                     </p>
-                    <div>
+                    <div className="justify-content-between d-flex flex-row">
                       <button
                         className="btn btn-primary rounded-1 me-2"
                         onClick={() => handleShowModal(kandidat)}
                       >
                         {kandidat.vote}
                       </button>
-                      <button
-                        className="btn btn-info rounded-1"
-                        onClick={() => handleShowModal(kandidat)}
-                      >
-                        About
-                      </button>
+                      <Dropdown>
+                        <Dropdown.Toggle variant="light" className="">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                          <Dropdown.Item
+                            href="#/action-1"
+                            className="btn rounded-1"
+                            onClick={() => handleShowModal(kandidat)}
+                          >
+                            <i class="fa-solid fa-circle-info"></i> Detail
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-2">
+                            <i class="fa-solid fa-share-nodes"></i> Bagikan
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-3">
+                            <i class="fa-regular fa-bookmark"></i> Simpan
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
                     </div>
                   </div>
                 </Col>

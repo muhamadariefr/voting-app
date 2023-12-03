@@ -33,10 +33,10 @@ const HomePage = () => {
                 className="btn btn-primary btn-lg rounded-1 me-2 mb-xs-0 mb-2"
                 onClick={() => navigate("/kandidat")}
               >
-                Lihat Kandidat
+                Lihat Kandidat <i class="fa-solid fa-eye"></i>
               </button>
               <button className="btn btn-info text-light btn-lg rounded-1 me-2 mb-xs-0 mb-2">
-                Voting Sekarang
+                Vote <i class="fa-solid fa-check-to-slot"></i>
               </button>
             </Col>
             <Col
