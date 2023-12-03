@@ -22,7 +22,7 @@ function Dashboard() {
           <Navbar key={expand} expand={expand} className="bg-light mb-3 w-100">
             <Container fluid className="px-5 md-me-5">
               <Navbar.Brand href="#" className="fw-bold">
-                <i class="fa-solid fa-dragon px-2"></i>Voting
+                <i className="fa-solid fa-dragon px-2"></i>Voting
                 <span className="text-primary">App</span>
               </Navbar.Brand>
               <Navbar.Toggle
@@ -62,14 +62,14 @@ function Dashboard() {
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
                       <NavDropdown.Item href="#action3">
-                        <i class="fa-solid fa-gear me-2"></i>Setting
+                        <i className="fa-solid fa-gear me-2"></i>Setting
                       </NavDropdown.Item>
                       <NavDropdown.Item href="#action4">
-                        <i class="fa-solid fa-circle-user me-2"></i>Profile
+                        <i className="fa-solid fa-circle-user me-2"></i>Profile
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="/login">
-                        <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                        <i className="fa-solid fa-arrow-right-from-bracket me-2"></i>
                         Logout
                       </NavDropdown.Item>
                     </NavDropdown>
@@ -81,46 +81,46 @@ function Dashboard() {
         ))}
       </>
       <div className="container admin-content" id="page-content-wrapper">
-        <div class="container-fluid px-4">
-          <div class="row g-3 my-2">
-            <div class="col-md-3">
-              <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+        <div className="container-fluid px-4">
+          <div className="row g-3 my-2">
+            <div className="col-md-3">
+              <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
-                  <h3 class="fs-2 fw-bold text-primary">500+</h3>
-                  <p class="fs-5">Kandidat</p>
+                  <h3 className="fs-2 fw-bold text-primary">500+</h3>
+                  <p className="fs-5">Kandidat</p>
                 </div>
 
-                <i class="fa-solid fa-users fs-1 primary-text border rounded secondary-bg p-3"></i>
+                <i className="fa-solid fa-users fs-1 primary-text border rounded secondary-bg p-3"></i>
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+            <div className="col-md-3">
+              <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
-                  <h3 class="fs-2 fw-bold text-primary">1500+</h3>
-                  <p class="fs-5">Pemilih</p>
+                  <h3 className="fs-2 fw-bold text-primary">1500+</h3>
+                  <p className="fs-5">Pemilih</p>
                 </div>
-                <i class="fa-solid fa-user fs-1 primary-text border rounded secondary-bg p-3"></i>
+                <i className="fa-solid fa-user fs-1 primary-text border rounded secondary-bg p-3"></i>
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+            <div className="col-md-3">
+              <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
-                  <h3 class="fs-2 fw-bold text-primary">8700+</h3>
-                  <p class="fs-5">Voting</p>
+                  <h3 className="fs-2 fw-bold text-primary">8700+</h3>
+                  <p className="fs-5">Voting</p>
                 </div>
-                <i class="fa-sharp fa-solid fa-check-to-slot fs-1 primary-text border rounded secondary-bg p-3"></i>
+                <i className="fa-sharp fa-solid fa-check-to-slot fs-1 primary-text border rounded secondary-bg p-3"></i>
               </div>
             </div>
 
-            <div class="col-md-3">
-              <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+            <div className="col-md-3">
+              <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
-                  <h3 class="fs-2 fw-bold text-primary">85%</h3>
-                  <p class="fs-5">Real Time</p>
+                  <h3 className="fs-2 fw-bold text-primary">85%</h3>
+                  <p className="fs-5">Real Time</p>
                 </div>
-                <i class="fas fa-chart-line fs-1 primary-text border rounded secondary-bg p-3"></i>
+                <i className="fas fa-chart-line fs-1 primary-text border rounded secondary-bg p-3"></i>
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ function Dashboard() {
             <Col md={6} className="pt-2 pb-2">
               <Card>
                 <Card.Body>
-                  <i class="fa-solid fa-circle-info px-2 py-2"></i>
+                  <i className="fa-solid fa-circle-info px-2 py-2"></i>
                   <span className="fw-bold fs-5">INFORMASI PEMILIHAN</span>
                   <hr />
                   <DataLine />
@@ -138,7 +138,7 @@ function Dashboard() {
             <Col md={6} className="pt-2 pb-2">
               <Card>
                 <Card.Body>
-                  <i class="fa-solid fa-circle-user px-2 py-2"></i>
+                  <i className="fa-solid fa-circle-user px-2 py-2"></i>
                   <span className="fw-bold fs-5">INFORMASI AKUN</span>
                   <hr />
                   <DataBar />
@@ -148,7 +148,7 @@ function Dashboard() {
             <Col md={6} className="pt-2 pb-2">
               <Card>
                 <Card.Body>
-                  <i class="fa-solid fa-chart-simple px-2 py-2"></i>
+                  <i className="fa-solid fa-chart-simple px-2 py-2"></i>
                   <span className="fw-bold fs-5">HASIL PEMILIHAN</span>
                   <hr />
                   <div style={{ maxWidth: "300px", margin: "0 auto" }}>
@@ -160,7 +160,7 @@ function Dashboard() {
             <Col md={6} className="pt-2 pb-2">
               <Card>
                 <Card.Body>
-                  <i class="fa-solid fa-chart-simple px-2 py-2"></i>
+                  <i className="fa-solid fa-chart-simple px-2 py-2"></i>
                   <span className="fw-bold fs-5">JUMLAH KANDIDAT</span>
                   <hr />
                   <div style={{ margin: "0 auto" }}>

@@ -1,13 +1,15 @@
 import Kandidat1 from "../assets/img/kandidat/prabowo.jpeg";
 import Kandidat2 from "../assets/img/kandidat/ganjarpranowo.jpg";
 import Kandidat3 from "../assets/img/kandidat/anies.jpg";
-import Kandidat4 from "../assets/img/kandidat/puan.jpg";
-import Kandidat5 from "../assets/img/kandidat/ridwankamil.jpg";
-import Kandidat6 from "../assets/img/kandidat/sandiuno.jpg";
-import Kandidat7 from "../assets/img/kandidat/ahy.jpg";
-import Kandidat8 from "../assets/img/kandidat/gibran.jpg";
-import Kandidat9 from "../assets/img/kandidat/jokowi.jpg";
-import Kandidat10 from "../assets/img/kandidat/marufamin.jpg";
+import Kandidat4 from "../assets/img/kandidat/cakimin.jpg";
+import Kandidat5 from "../assets/img/kandidat/mahfud.jpg";
+import Kandidat6 from "../assets/img/kandidat/gibran.jpg";
+import Kandidat7 from "../assets/img/kandidat/ridwankamil.jpg";
+import Kandidat8 from "../assets/img/kandidat/sandiuno.jpg";
+import Kandidat9 from "../assets/img/kandidat/ahy.jpg";
+import Kandidat10 from "../assets/img/kandidat/puan.jpg";
+import Kandidat11 from "../assets/img/kandidat/jokowi.jpg";
+import Kandidat12 from "../assets/img/kandidat/marufamin.jpg";
 
 import People1 from "../assets/img/testimonial/people-1.jpg";
 import People2 from "../assets/img/testimonial/people-2.jpg";
@@ -16,7 +18,7 @@ import People3 from "../assets/img/testimonial/people-3.jpg";
 export const navLinks = [{
         id: 1,
         path: "",
-        text: "Home",
+        text: "Beranda",
     },
     {
         id: 2,
@@ -52,7 +54,7 @@ export const semuakandidat = [{
         born: "17 Oktober 1951",
         jabatan: "Menteri Pertahanan RI",
         partai: "GERINDRA",
-        vote: "Voting",
+        vote: "Vote",
         delay: "",
     },
     {
@@ -67,7 +69,7 @@ export const semuakandidat = [{
         born: "28 Oktober 1968",
         jabatan: "Gubernur Jawa Tengah",
         partai: "PDIP",
-        vote: "Voting",
+        vote: "Vote",
         delay: "200",
     },
     {
@@ -82,7 +84,7 @@ export const semuakandidat = [{
         born: "7 Mei 1969",
         jabatan: "Gubernur DKI Jakarta",
         partai: "NASDEM",
-        vote: "Voting",
+        vote: "Vote",
         delay: "400",
     },
     {
@@ -93,11 +95,11 @@ export const semuakandidat = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Puan Maharani",
-        born: "6 September 1973",
-        jabatan: "Ketua DPR RI",
-        partai: "PDIP",
-        vote: "Voting",
+        title: "Muhaimin Iskandar",
+        born: "24 September 1966",
+        jabatan: "Ketua PKB",
+        partai: "PKB",
+        vote: "Vote",
         delay: "",
     },
     {
@@ -108,11 +110,11 @@ export const semuakandidat = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Ridwan Kamil",
-        born: "4 Oktober 1971",
-        jabatan: "Gubernur Jawa Barat",
-        partai: "GOLKAR",
-        vote: "Voting",
+        title: "Mahfud MD",
+        born: "13 Mei 1957",
+        jabatan: "Menteri Polhukam",
+        partai: "PKB",
+        vote: "Vote",
         delay: "200",
     },
     {
@@ -123,11 +125,11 @@ export const semuakandidat = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Sandiaga Uno",
-        born: "28 Juni 1969",
-        jabatan: "Menteri Pariwisata & Ekonomi Kreatif",
-        partai: "PPP",
-        vote: "Voting",
+        title: "Gibran Rakabuming",
+        born: "1 Oktober 1987",
+        jabatan: "Walikota Solo",
+        partai: "PDIP",
+        vote: "Vote",
         delay: "400",
     },
     {
@@ -138,11 +140,11 @@ export const semuakandidat = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Agus Harimurti",
-        born: "28 Juni 1969",
-        jabatan: "Ketua Partai Demokrat",
-        partai: "DEMOKRAT",
-        vote: "Voting",
+        title: "Ridwan Kamil",
+        born: "4 Oktober 1971",
+        jabatan: "Gubernur Jawa Barat",
+        partai: "GOLKAR",
+        vote: "Vote",
         delay: "400",
     },
     {
@@ -153,11 +155,11 @@ export const semuakandidat = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Gibran Rakabuming",
-        born: "1 Oktober 1987",
-        jabatan: "Walikota Solo",
-        partai: "PDIP",
-        vote: "Voting",
+        title: "Sandiaga Uno",
+        born: "28 Juni 1969",
+        jabatan: "Menteri Parekraf",
+        partai: "PPP",
+        vote: "Vote",
         delay: "400",
     },
     {
@@ -168,16 +170,46 @@ export const semuakandidat = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
+        title: "Agus Harimurti",
+        born: "10 Agustus 1978",
+        jabatan: "Ketua Demokrat",
+        partai: "DEMOKRAT",
+        vote: "Vote",
+        delay: "600",
+    },
+    {
+        id: 10,
+        image: Kandidat10,
+        star1: "fa-solid fa-star",
+        star2: "fa-solid fa-star",
+        star3: "fa-solid fa-star",
+        star4: "fa-solid fa-star",
+        star5: "fa-solid fa-star",
+        title: "Puan Maharani",
+        born: "6 September 1973",
+        jabatan: "Ketua DPR RI",
+        partai: "PDIP",
+        vote: "Vote",
+        delay: "600",
+    },
+    {
+        id: 11,
+        image: Kandidat11,
+        star1: "fa-solid fa-star",
+        star2: "fa-solid fa-star",
+        star3: "fa-solid fa-star",
+        star4: "fa-solid fa-star",
+        star5: "fa-solid fa-star",
         title: "Joko Widodo",
         born: "21 Juni 1961",
-        jabatan: "Presiden RI ke-7",
+        jabatan: "Presiden RI",
         partai: "PDIP",
-        vote: "Voting Sekarang",
+        vote: "Vote",
         delay: "600",
     },
     {
-        id: 10,
-        image: Kandidat10,
+        id: 12,
+        image: Kandidat12,
         star1: "fa-solid fa-star",
         star2: "fa-solid fa-star",
         star3: "fa-solid fa-star",
@@ -187,40 +219,9 @@ export const semuakandidat = [{
         born: "11 Maret 1943",
         jabatan: "Wakil Presiden RI",
         partai: "PKNU",
-        vote: "Voting Sekarang",
+        vote: "Vote",
         delay: "600",
-    },
-    {
-        id: 10,
-        image: Kandidat10,
-        star1: "fa-solid fa-star",
-        star2: "fa-solid fa-star",
-        star3: "fa-solid fa-star",
-        star4: "fa-solid fa-star",
-        star5: "fa-solid fa-star",
-        title: "Ma'ruf Amin",
-        born: "11 Maret 1943",
-        jabatan: "Wakil Presiden RI",
-        partai: "PKNU",
-        vote: "Voting Sekarang",
-        delay: "600",
-    },
-    {
-        id: 10,
-        image: Kandidat10,
-        star1: "fa-solid fa-star",
-        star2: "fa-solid fa-star",
-        star3: "fa-solid fa-star",
-        star4: "fa-solid fa-star",
-        star5: "fa-solid fa-star",
-        title: "Ma'ruf Amin",
-        born: "11 Maret 1943",
-        jabatan: "Wakil Presiden RI",
-        partai: "PKNU",
-        vote: "Voting Sekarang",
-        delay: "600",
-    },
-
+    },  
 ];
 
 export const kandidatTerbaru = [{
@@ -235,7 +236,7 @@ export const kandidatTerbaru = [{
         born: "17 Oktober 1951",
         jabatan: "Menteri Pertahanan RI",
         partai: "GERINDRA",
-        vote: "Voting",
+        vote: "Vote",
         delay: "",
     },
     {
@@ -250,7 +251,7 @@ export const kandidatTerbaru = [{
         born: "28 Oktober 1968",
         jabatan: "Gubernur Jawa Tengah",
         partai: "PDIP",
-        vote: "Voting",
+        vote: "Vote",
         delay: "200",
     },
     {
@@ -265,7 +266,7 @@ export const kandidatTerbaru = [{
         born: "7 Mei 1969",
         jabatan: "Gubernur DKI Jakarta",
         partai: "NASDEM",
-        vote: "Voting",
+        vote: "Vote",
         delay: "400",
     },
     {
@@ -276,11 +277,11 @@ export const kandidatTerbaru = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Puan Maharani",
-        born: "6 September 1973",
-        jabatan: "Ketua DPR RI",
-        partai: "PDIP",
-        vote: "Voting",
+        title: "Muhaimin Iskandar",
+        born: "24 September 1966",
+        jabatan: "Ketua PKB",
+        partai: "PKB",
+        vote: "Vote",
         delay: "",
     },
     {
@@ -291,11 +292,11 @@ export const kandidatTerbaru = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Ridwan Kamil",
-        born: "4 Oktober 1971",
-        jabatan: "Gubernur Jawa Barat",
-        partai: "GOLKAR",
-        vote: "Voting",
+        title: "Mahfud MD",
+        born: "13 Mei 1957",
+        jabatan: "Menteri Polhukam",
+        partai: "PKB",
+        vote: "Vote",
         delay: "200",
     },
     {
@@ -306,11 +307,11 @@ export const kandidatTerbaru = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Sandiaga Uno",
-        born: "28 Juni 1969",
-        jabatan: "Menteri Parekraf",
-        partai: "PPP",
-        vote: "Voting",
+        title: "Gibran Rakabuming",
+        born: "1 Oktober 1987",
+        jabatan: "Walikota Solo",
+        partai: "PDIP",
+        vote: "Vote",
         delay: "400",
     },
     {
@@ -321,11 +322,11 @@ export const kandidatTerbaru = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Agus Harimurti",
-        born: "28 Juni 1969",
-        jabatan: "Ketua Partai Demokrat",
-        partai: "DEMOKRAT",
-        vote: "Voting",
+        title: "Ridwan Kamil",
+        born: "4 Oktober 1971",
+        jabatan: "Gubernur Jawa Barat",
+        partai: "GOLKAR",
+        vote: "Vote",
         delay: "400",
     },
     {
@@ -336,11 +337,11 @@ export const kandidatTerbaru = [{
         star3: "fa-solid fa-star",
         star4: "fa-solid fa-star",
         star5: "fa-solid fa-star",
-        title: "Gibran Rakabuming",
-        born: "1 Oktober 1987",
-        jabatan: "Walikota Solo",
-        partai: "PDIP",
-        vote: "Voting",
+        title: "Sandiaga Uno",
+        born: "28 Juni 1969",
+        jabatan: "Menteri Parekraf",
+        partai: "PPP",
+        vote: "Vote",
         delay: "400",
     },
 ];
@@ -442,8 +443,8 @@ export const faq = [{
     {
         id: 2,
         eventKey: 1,
-        title: "Bagaimana Sistem Votingnya?",
-        desc: "Kami mengutamakan integritas dan kepercayaan dalam setiap pemilihan yang diselenggarakan melalui platform kami. Dengan sistem voting yang andal dan transparan, kami berharap dapat memberikan pengalaman pemilihan yang baik bagi semua pengguna kami.",
+        title: "Bagaimana Sistem Votenya?",
+        desc: "Kami mengutamakan integritas dan kepercayaan dalam setiap pemilihan yang diselenggarakan melalui platform kami. Dengan sistem Vote yang andal dan transparan, kami berharap dapat memberikan pengalaman pemilihan yang baik bagi semua pengguna kami.",
     },
     {
         id: 3,
@@ -472,13 +473,13 @@ export const faq = [{
     {
         id: 7,
         eventKey: 6,
-        title: "Apakah Saya Boleh Mendownload Hasil Voting?",
+        title: "Apakah Saya Boleh Mendownload Hasil Vote?",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
     },
     {
         id: 8,
         eventKey: 7,
-        title: "Apakah boleh ganti Kandidat ketika sudah Voting?",
+        title: "Apakah boleh ganti Kandidat ketika sudah Vote?",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
     },
 ];

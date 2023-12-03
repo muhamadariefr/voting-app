@@ -9,8 +9,7 @@ const FivePage = () => {
             <Col>
               <h1 className="fw-bold text-center">Syarat & Ketentuan</h1>
               <p className="text-center">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptatibus, alias!
+                Berikut syarat dan ketentuan pengguna untuk menggunakan platform pemilihan online
               </p>
             </Col>
           </Row>

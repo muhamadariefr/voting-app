@@ -31,7 +31,7 @@ const Footer = () => {
                 target="_blank"
               >
                 <i className="fa-regular fa-envelope"></i>
-                <p className="m-0">email@gmail.com</p>
+                <p className="m-0">votingapp@gmail.com</p>
               </Link>
             </div>
           </Col>
@@ -52,13 +52,13 @@ const Footer = () => {
               </button>
             </div>
             <div className="social mt-3">
-              <a href="https://instagram.com/muhamadariefr" target="_blank">
+              <a href="https://instagram.com/" target="_blank">
                 <i className="fa-brands fa-instagram"></i>
               </a>
               <a href="https://facebook.com/" target="_blank">
                 <i className="fa-brands fa-facebook"></i>{" "}
               </a>
-              <a href="https://github.com/muhamadariefr" target="_blank">
+              <a href="https://github.com/" target="_blank">
                 <i className="fa-brands fa-github"></i>
               </a>
               <a href="https://linkedin.com/" target="_blank">

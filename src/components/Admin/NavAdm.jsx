@@ -17,13 +17,13 @@ function NavAdm({ Toggle }) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="#setting" className="p-2">
-              <i class="fa-solid fa-gear"></i> Setting
+              <i className="fa-solid fa-gear"></i> Setting
             </Nav.Link>
             <Nav.Link href="#profile" className="p-2">
-              <i class="fa-solid fa-circle-user"></i> Profile
+              <i className="fa-solid fa-circle-user"></i> Profile
             </Nav.Link>
             <Nav.Link href="/login" className="p-2">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

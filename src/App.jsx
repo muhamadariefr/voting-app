@@ -15,6 +15,8 @@ import Users from "./components/Admin/Users";
 import Order from "./components/Admin/Order";
 import Report from "./components/Admin/Report";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   const location = useLocation();
   const hideNavbar =

@@ -1,8 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 function Login() {
-  let navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // To track password visibility
+  const navigate = useNavigate();
+
+  // Simulate admin login logic
+  const handleLogin = () => {
+    if (email === "admin@gmail.com" && password === "admin123") {
+      // Redirect to the admin dashboard
+      navigate("/admin");
+    } else {
+      // Handle login failure (e.g., show an error message)
+      alert("Login failed. Please check your credentials.");
+    }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <div className="login template d-flex justify-content-center align-items-center vh-100 text-light pt-5">
@@ -14,7 +32,7 @@ function Login() {
         <form>
           <h1 className="text-center mb-2 fw-bold title-form">Masuk</h1>
           <div className="login-icon">
-            <i class="fa-solid fa-circle-user user-login"></i>
+            <i className="fa-solid fa-circle-user user-login"></i>
           </div>
           <div className="mb-2">
             <label htmlFor="email">Email</label>
@@ -22,15 +40,28 @@ function Login() {
               type="email"
               placeholder="Masukan Email"
               className="form-control"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-2">
             <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              placeholder="Masukan Password"
-              className="form-control"
-            />
+            <div className="input-group">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Masukan Password"
+                className="form-control"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span className="input-group-text">
+                <i
+                  className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
+                  onClick={togglePasswordVisibility}
+                  style={{ cursor: "pointer" }}
+                ></i>
+              </span>
+            </div>
           </div>
           <div className="mb-2">
             <input
@@ -43,7 +74,7 @@ function Login() {
             </label>
           </div>
           <div className="d-grid">
-            <button className="btn btn-info" onClick={() => navigate("/admin")}>
+            <button className="btn btn-info" onClick={handleLogin}>
               Masuk
             </button>
           </div>
@@ -51,18 +82,12 @@ function Login() {
             <a href="#" className="text-decoration-none text-light">
               Lupa Password?
             </a>{" "}
-            <Link
-              to="/signup"
-              className="text-decoration-none ms-2 text-light fw-bold"
-            >
+            <Link to="/signup" className="text-decoration-none ms-2 text-light fw-bold">
               Daftar Akun
             </Link>
           </p>
           <p className="text-center">
-          <Link
-              to="/"
-              className="text-decoration-none ms-2 text-light fw-bold"
-            >
+            <Link to="/" className="text-decoration-none ms-2 text-light fw-bold">
               Kembali ke Beranda
             </Link>
           </p>
