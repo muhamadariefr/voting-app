@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 function ModalEdit() {
   const [show, setShow] = useState(false);
@@ -11,22 +11,20 @@ function ModalEdit() {
   return (
     <>
       <Button variant="danger" onClick={handleShow}>
-      <i class="fa-solid fa-trash-can"></i>
+        <i class="fa-solid fa-trash-can"></i> Hapus
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Hapus Kandidat</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-            Anda yakin ingin menghapusnya?
-        </Modal.Body>
+        <Modal.Body>Anda yakin ingin menghapusnya?</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Batal
+          <Button variant="danger" onClick={handleClose}>
+            <i class="fa-solid fa-xmark"></i> Batal
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Yakin
+            <i class="fa-solid fa-check"></i> Yakin
           </Button>
         </Modal.Footer>
       </Modal>

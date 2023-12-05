@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import NavAdm from "./NavAdm";
 import Sidebar from "./Sidebar";
-import ModalAdd from "./ModalAdd";
-import ModalEdit from "./ModalEdit";
-import ModalHapus from "./ModalHapus";
+import ModalAdd from "./ModalAdmin/ModalAdd";
+import ModalEdit from "./ModalAdmin/ModalEdit";
+import ModalHapus from "./ModalAdmin/ModalHapus";
 import { Row, Col, Card, Table } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 function Order() {

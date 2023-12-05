@@ -14,7 +14,7 @@ function ModalAdd() {
         Add <i class="fa-solid fa-plus"></i>
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Tambah Kandidat</Modal.Title>
         </Modal.Header>

@@ -1,7 +1,8 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
 import HeroImage from "../assets/img/voting.svg";
 import { kandidatTerbaru, dataSwiper } from "../data/index";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Faq from "../components/FaqComponent";
 
@@ -11,11 +12,21 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import ModalVoteLogin from "../components/ModalPopUp/ModalVoteLogin";
 
 const HomePage = () => {
   let navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  const [selectedCandidate, setSelectedCandidate] = useState(null);
 
-   
+  const handleShowModal = (candidate) => {
+    setSelectedCandidate(candidate);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <div className="homepage">
@@ -30,16 +41,11 @@ const HomePage = () => {
               <p className="mb-4">
                 Pilih Kandidat Secara Online dengan Demokrasi Digital untuk Masa
                 Depan yang Lebih Baik!
-              </p>
-              <button
-                className="btn btn-primary btn-lg rounded-1 me-2 mb-xs-0 mb-2"
-                onClick={() => navigate("/kandidat")}
-              >
-                Lihat Kandidat <i class="fa-solid fa-eye"></i>
-              </button>
-              <button className="btn btn-info text-light btn-lg rounded-1 me-2 mb-xs-0 mb-2">
-                Vote <i class="fa-solid fa-check-to-slot"></i>
-              </button>
+              </p>              
+              <Button variant="primary" onClick={() => navigate("/kandidat")} className="me-2 btn-lg">
+                Lihat Kandidat
+              </Button>
+              <ModalVoteLogin />
             </Col>
             <Col
               lg="6"
@@ -86,9 +92,35 @@ const HomePage = () => {
                     <p className="m-0 text-primary fw-semibold">
                       {kandidat.partai}
                     </p>
-                    <button className="btn btn-primary rounded-1 text-light">
-                      {kandidat.vote}
-                    </button>
+                    <div className="justify-content-between d-flex flex-row">
+                      <button
+                        className="btn btn-primary rounded-1 me-2"
+                        onClick={() => handleShowModal(kandidat)}
+                      >
+                        {kandidat.vote}
+                      </button>
+                      <Dropdown>
+                        <Dropdown.Toggle variant="light" className="">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                          <Dropdown.Item
+                            href="#/action-1"
+                            className="btn rounded-1"
+                            onClick={() => handleShowModal(kandidat)}
+                          >
+                            <i class="fa-solid fa-circle-info"></i> Detail
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-2">
+                            <i class="fa-solid fa-share-nodes"></i> Bagikan
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-3">
+                            <i class="fa-regular fa-bookmark"></i> Simpan
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </div>
                   </div>
                 </Col>
               );
@@ -161,6 +193,36 @@ const HomePage = () => {
         </Container>
       </div>
       <Faq />
+
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Data Kandidat</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-6">
+                <img
+                  src={selectedCandidate?.image}
+                  alt={selectedCandidate?.title}
+                  className="w-100 mb-3 rounded"
+                />
+              </div>
+              <div className="col-md-6">
+                <h5>{selectedCandidate?.title}</h5>
+                <p>{selectedCandidate?.jabatan}</p>
+                <p>{selectedCandidate?.born}</p>
+                <p>{selectedCandidate?.partai}</p>
+              </div>
+            </div>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

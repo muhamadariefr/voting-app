@@ -98,10 +98,10 @@ const UserSettingModal = ({ show, handleClose, userData }) => {
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={handleClose}>
-          Update
+        <i class="fa-solid fa-rotate"></i> Update
         </Button>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
+        <Button variant="danger" onClick={handleClose}>
+        <i class="fa-solid fa-xmark"></i> Batal
         </Button>
       </Modal.Footer>
     </Modal>

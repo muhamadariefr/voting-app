@@ -65,7 +65,7 @@ function Sidebar({value}) {
                             >
                                 <i className="bi bi-table me-3 fs-4"></i>
                                 <span className="fs-5">
-                                    Orders
+                                    Candidate
                                 </span>
                             </li>
                         </Link>

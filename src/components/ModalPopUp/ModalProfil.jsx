@@ -11,7 +11,7 @@ const UserProfileModal = ({ show, handleClose, userData }) => {
         <Modal.Body>
           <div className="text-center">
             <img
-              src="/profile.jpg" // Replace with the actual path to your image
+              src="/profile.jpg"
               alt="Profile Image"
               className="img-fluid rounded-circle mb-3"
               style={{ width: "100px", height: "auto" }}

@@ -11,10 +11,10 @@ function ModalEdit() {
   return (
     <>
       <Button variant="success" onClick={handleShow}>
-        <i class="fa-solid fa-pen-to-square"></i>
+        <i class="fa-solid fa-pen-to-square"></i> Edit
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Edit Kandidat</Modal.Title>
         </Modal.Header>
@@ -31,6 +31,18 @@ function ModalEdit() {
               className="form-control mb-2"
               name="namaKandidat"
               placeholder="Nama Kandidat"
+            />
+            <input
+              type="date"
+              className="form-control mb-2"
+              name="date"
+              placeholder="Tanggal Lahir"
+            />
+            <input
+              type="text"
+              className="form-control mb-2"
+              name="status"
+              placeholder="Status"
             />
             <input
               type="text"
