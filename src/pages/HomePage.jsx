@@ -12,12 +12,13 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import ModalVoteLogin from "../components/ModalPopUp/ModalVoteLogin";
 
 const HomePage = () => {
   let navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState(null);
+
+  const [voteShow, setvoteShow] = useState(false);
 
   const handleShowModal = (candidate) => {
     setSelectedCandidate(candidate);
@@ -27,6 +28,20 @@ const HomePage = () => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  // Vote Show
+  const showVote = (candidate) => {
+    setSelectedCandidate(candidate);
+    setvoteShow(true);
+  };
+
+  const closeVote = () => {
+    setvoteShow(false);
+  };
+
+  let keyLogin;
+  keyLogin = JSON.parse(localStorage.getItem("keyLogin"));
+  console.log(keyLogin);
 
   return (
     <div className="homepage">
@@ -41,11 +56,21 @@ const HomePage = () => {
               <p className="mb-4">
                 Pilih Kandidat Secara Online dengan Demokrasi Digital untuk Masa
                 Depan yang Lebih Baik!
-              </p>              
-              <Button variant="primary" onClick={() => navigate("/kandidat")} className="me-2 btn-lg">
-                Lihat Kandidat
+              </p>
+              <Button
+                variant="primary"
+                onClick={() => navigate("/login")}
+                className="me-2 btn-lg"
+              >
+                <i class="fa-solid fa-circle-play"></i> Mulai
               </Button>
-              <ModalVoteLogin />
+              <Button
+                variant="outline-primary"
+                onClick={() => navigate("/Kandidat")}
+                className="me-2 btn-lg"
+              >
+                <i class="fa-solid fa-eye"></i> Lihat Kandidat
+              </Button>
             </Col>
             <Col
               lg="6"
@@ -94,10 +119,20 @@ const HomePage = () => {
                     </p>
                     <div className="justify-content-between d-flex flex-row">
                       <button
-                        className="btn btn-primary rounded-1 me-2"
-                        onClick={() => handleShowModal(kandidat)}
+                        className="btn btn-primary rounded-1 me-1"
+                        onClick={() =>
+                          keyLogin == 1 ? "" : showVote(kandidat)
+                        }
                       >
-                        {kandidat.vote}
+                        {kandidat.vote} <i class="fa-solid fa-thumbs-up"></i>
+                      </button>
+                      <button
+                        className="btn btn-danger rounded-1 me-1"
+                        onClick={() =>
+                          keyLogin == 1 ? "" : showVote(kandidat)
+                        }
+                      >
+                        <i class="fa-solid fa-thumbs-down"></i>
                       </button>
                       <Dropdown>
                         <Dropdown.Toggle variant="light" className="">
@@ -177,12 +212,12 @@ const HomePage = () => {
               {dataSwiper.map((data) => {
                 return (
                   <SwiperSlide key={data.id} className="shadow rounded-5">
-                    <p className="desc">{data.desc}</p>
+                    <p style={{ textAlign: "center"}} className="desc">{data.desc}</p>
                     <div className="people">
                       <img src={data.image} alt="" />
                       <div>
                         <h5 className="mb-1">{data.name}</h5>
-                        <p className="m-0 fw-bold">{data.skill}</p>
+                        <p className="m-0">{data.skill}</p>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -194,6 +229,27 @@ const HomePage = () => {
       </div>
       <Faq />
 
+      {/* Modal Login Dahulu */}
+      <Modal show={voteShow} onHide={closeVote} centered>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+          <div className="text-center">
+            <i
+              className="fa-solid fa-circle-exclamation"
+              style={{ fontSize: "100px", color: "red" }}
+            ></i>
+            <h1 className="fw-bold p-2">Login Dulu!</h1>
+            <p style={{ fontSize: "14px" }}>
+              Untuk mengakses halaman ini, kamu wajib login terlebih dahulu
+            </p>
+            <Button variant="primary" onClick={() => navigate("/login")}>
+              Login <i class="fa-solid fa-circle-arrow-right"></i>
+            </Button>
+          </div>
+        </Modal.Body>
+      </Modal>
+
+      {/* Modal Candidate */}
       <Modal show={showModal} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
           <Modal.Title>Data Kandidat</Modal.Title>
@@ -209,19 +265,38 @@ const HomePage = () => {
                 />
               </div>
               <div className="col-md-6">
-                <h5>{selectedCandidate?.title}</h5>
+                <h5 className="fw-bold">{selectedCandidate?.title}</h5>
                 <p>{selectedCandidate?.jabatan}</p>
                 <p>{selectedCandidate?.born}</p>
                 <p>{selectedCandidate?.partai}</p>
+                <i
+                  className={selectedCandidate?.star1}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star2}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star3}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star4}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star5}
+                  style={{ color: "gold" }}
+                ></i>
+                <p style={{ fontSize: "14px" }}>Very Positive</p>
               </div>
+              <p style={{ textAlign: "justify", fontSize: "14px" }}>
+                {selectedCandidate?.desc}
+              </p>
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </div>
   );

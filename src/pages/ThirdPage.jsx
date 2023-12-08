@@ -12,8 +12,10 @@ const ThirdPage = () => {
             <Col>
               <h1 className="text-center fw-bold">Semua Testimonial</h1>
               <p className="text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-                iusto.
+                Testimoni dan komentar dari para pengguna website VotingApp
+                setelah menggunakan website tersebut untuk memilih para kandidat
+                atau pejabat atas kepuasaan mereka terhadap kontribusi dan kinerja serta kebijakan yang dibuat para
+                kandidat atau pejabat.
               </p>
             </Col>
           </Row>

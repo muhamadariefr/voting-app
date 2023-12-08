@@ -61,11 +61,17 @@ const SecondPage = () => {
                         className="btn btn-primary rounded-1 me-2"
                         onClick={() => handleShowModal(kandidat)}
                       >
-                        {kandidat.vote}
+                        {kandidat.vote} <i class="fa-solid fa-thumbs-up"></i>
+                      </button>
+                      <button
+                        className="btn btn-danger rounded-1 me-2"
+                        onClick={() => handleShowModal(kandidat)}
+                      >
+                        <i class="fa-solid fa-thumbs-down"></i>
                       </button>
                       <Dropdown>
                         <Dropdown.Toggle variant="light" className="">
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -110,19 +116,38 @@ const SecondPage = () => {
                 />
               </div>
               <div className="col-md-6">
-                <h5>{selectedCandidate?.title}</h5>
+                <h5 className="fw-bold">{selectedCandidate?.title}</h5>
                 <p>{selectedCandidate?.jabatan}</p>
                 <p>{selectedCandidate?.born}</p>
                 <p>{selectedCandidate?.partai}</p>
+                <i
+                  className={selectedCandidate?.star1}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star2}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star3}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star4}
+                  style={{ color: "gold" }}
+                ></i>
+                <i
+                  className={selectedCandidate?.star5}
+                  style={{ color: "gold" }}
+                ></i>
+                <p style={{ fontSize: "14px" }}>Very Positive</p>
               </div>
+              <p style={{ textAlign: "justify", fontSize: "14px" }}>
+                {selectedCandidate?.desc}
+              </p>
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </div>
   );

@@ -72,7 +72,7 @@ const Footer = () => {
             <p className="text-center px-md-0 px-3">
               &copy; {new Date().getFullYear()}{" "}
               <span className="fw-bold">
-                Voting<span className="text-primary">App</span>{" "}
+                Voting<span className="text-primary">App</span>{" "} 
               </span>
             </p>
           </Col>
