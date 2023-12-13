@@ -7,21 +7,21 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false); // To track password visibility
   const navigate = useNavigate();
   let verif = 0;
-  
+
   // Simulate admin login logic
   const handleLogin = () => {
     if (email === "admin@gmail.com" && password === "admin123") {
       // Redirect to the admin dashboard
       navigate("/admin");
-    }else if(email === "user@gmail.com" && password === "user123"){
+    } else if (email === "user@gmail.com" && password === "user123") {
       // useEffect(() => {
-        localStorage.setItem('keyLogin', JSON.stringify(verif = 1));
+      localStorage.setItem("keyLogin", JSON.stringify((verif = 1)));
       //  }, [verif]);
-      
+
       navigate("/");
-    }  else {
+    } else {
       // Handle login failure (e.g., show an error message)
-      alert("Login failed. Please check your credentials.");
+      alert("Login Gagal. Username atau Password tidak valid!");
     }
   };
 
@@ -85,17 +85,25 @@ function Login() {
               Masuk
             </button>
           </div>
-          <p className="text-end mt-2">
+          <p className="text-center mt-2">
             <a href="#" className="text-decoration-none text-light">
               Lupa Password?
-            </a>{" "}
-            <Link to="/signup" className="text-decoration-none ms-2 text-light fw-bold">
-              Daftar Akun
-            </Link>
+            </a>
           </p>
-          <p className="text-center">
-            <Link to="/" className="text-decoration-none ms-2 text-light fw-bold">
-              Kembali ke Beranda
+          <div className="text-center d-grid">
+            <button className="btn btn-outline-info">
+              <Link
+                to="/signup"
+                className="text-decoration-none text-light fw-bold"
+              >
+                Daftar Akun
+              </Link>
+            </button>
+          </div>
+
+          <p className="text-start mt-4">
+            <Link to="/" className="text-decoration-none ms-2 text-light">
+              <i class="fa-solid fa-arrow-left"></i> Back to Home
             </Link>
           </p>
         </form>
