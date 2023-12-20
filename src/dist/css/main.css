@@ -18,6 +18,7 @@
     --second-bg-color: #9fc5ff;
 }
 
+
 /* LOGIN/REGISTER */
 
 .login-form {
@@ -79,7 +80,7 @@
     border: none;
 }
 
-.navbar-home .navbar{
+.navbar-home .navbar {
     position: fixed;
     width: 100%;
     transition: all 0.2s ease;
@@ -248,7 +249,7 @@ header {
     height: 100%;
     padding-bottom: 50px;
     z-index: 0;
-    
+
 }
 
 .homepage .testimonial .swiper-slide {
@@ -343,7 +344,7 @@ header {
 .footer {
     width: 100%;
     min-height: 30vh;
-    background:#fff;
+    background: #fff;
 }
 
 .footer .row:nth-child(1) .col:nth-child(1) h3 {
@@ -553,27 +554,56 @@ header {
     background-color: var(--second-bg-color);
 }
 
-.sidebar-adm a{
+.sidebar-adm a {
     text-decoration: none;
     color: #fff;
 }
-.sidebar-adm ul li:hover{   
-    background-color: rgb(117, 117, 117);   
+
+.sidebar-adm ul li:hover {
+    background-color: rgb(117, 117, 117);
     border-radius: 5px;
     cursor: pointer;
 }
+
 .sidebar-adm .nav-item {
     margin-top: 5px;
 }
-.sidebar-adm ul li:hover{   
-    color: #fff;  
+
+.sidebar-adm ul li:hover {
+    color: #fff;
 }
 
-.active{
-    background-color: rgb(117, 117, 117);   
+.active {
+    background-color: rgb(117, 117, 117);
     border-radius: 5px;
     color: #fff;
 }
 
+/* Legend */
+.legend {
+    
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 
+.legend-item {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
 
+.legend-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.legend-box.green {
+    background-color: green;
+    /* Green color for "Sudah Memilih" */
+}
+
+.legend-box.red {
+    background-color: red;
+    /* Red color for "Belum Memilih" */
+}

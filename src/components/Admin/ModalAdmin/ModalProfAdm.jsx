@@ -21,7 +21,7 @@ function ModalEdit() {
         <Modal.Body>
           <div className="text-center">
             <img
-              src="/profile.jpg"
+              src="/admin.png"
               alt="Profile Image"
               className="img-fluid rounded-circle mb-3"
               style={{ width: "100px", height: "auto" }}
@@ -29,15 +29,15 @@ function ModalEdit() {
           </div>
           <div className="detail-akun">
             <p>Username:</p>
-            <h5>Administrator</h5>
+            <h5>Admin1</h5>
           </div>
           <div className="detail-akun">
             <p>Nama Lengkap:</p>
-            <h5>Administrator Company</h5>
+            <h5>Ellen Leoniz</h5>
           </div>
           <div className="detail-akun">
             <p>Tanggal Lahir:</p>
-            <h5>19-01-1990</h5>
+            <h5>10-01-1995</h5>
           </div>
           <div className="detail-akun">
             <p>Email:</p>
@@ -45,7 +45,7 @@ function ModalEdit() {
           </div>
           <div className="detail-akun">
             <p>Status:</p>
-            <h5>admin</h5>
+            <h5>Administrator</h5>
           </div>
         </Modal.Body>
       </Modal>

@@ -21,7 +21,7 @@ function ModalSetAdm() {
         <Modal.Body>
           <div className="text-center">
             <img
-              src="/profile.jpg"
+              src="/admin.png"
               alt="Profile Image"
               className="img-fluid rounded-circle mb-3"
               style={{ width: "100px", height: "auto" }}

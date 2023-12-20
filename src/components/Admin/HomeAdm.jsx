@@ -23,7 +23,7 @@ function HomeAdm() {
             <div className="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                 <h3 className="fs-4 fw-bold text-primary">1500+</h3>
-                <p className="fs-5">Pemilih</p>
+                <p className="fs-5">Pengguna</p>
               </div>
               <i className="fa-solid fa-user fs-4 primary-text border rounded secondary-bg p-3"></i>
             </div>
@@ -32,7 +32,7 @@ function HomeAdm() {
           <div className="col-md-3">
             <div className="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
-                <h3 className="fs-4 fw-bold text-primary">8700+</h3>
+                <h3 className="fs-4 fw-bold text-primary">8000+</h3>
                 <p className="fs-5">Voting</p>
               </div>
               <i className="fa-sharp fa-solid fa-check-to-slot fs-4 primary-text border rounded secondary-bg p-3"></i>
@@ -43,7 +43,7 @@ function HomeAdm() {
             <div className="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                 <h3 className="fs-4 fw-bold text-primary">100%</h3>
-                <p className="fs-5">Real Time</p>
+                <p className="fs-5">Realtime Vote</p>
               </div>
               <i className="fas fa-chart-line fs-4 primary-text border rounded secondary-bg p-3"></i>
             </div>
@@ -64,7 +64,7 @@ function HomeAdm() {
             <Card>
               <Card.Body>
                 <i className="fa-solid fa-chart-simple px-2 py-2"></i>
-                <span className="fw-bold fs-5">HASIL PEMILIHAN</span>
+                <span className="fw-bold fs-5">HASIL SEMENTARA</span>
                 <hr />
                 <DataPie />
               </Card.Body>

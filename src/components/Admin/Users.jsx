@@ -25,7 +25,10 @@ function Users() {
   return (
     <div className="d-flex">
       <div className="d-flex">
-        <div className={toggle ? "d-none" : "w-auto position-fixed"} style={{zIndex: 1}}>
+        <div
+          className={toggle ? "d-none" : "w-auto position-fixed"}
+          style={{ zIndex: 1 }}
+        >
           <Sidebar value="2" />
         </div>
         <div className={toggle ? "d-none" : "invisible"}>
@@ -43,12 +46,22 @@ function Users() {
                   <span className="fw-bold fs-5">DAFTAR PEMILIH</span>
                   {/* <h5>DAFTAR PEMILIH</h5> */}
                   <hr />
+                  <div className="legend">
+                    <div className="legend-item">
+                      <div className="legend-box green"></div>
+                      <span className="legend-label">Sudah Memilih</span>
+                    </div>
+                    <div className="legend-item">
+                      <div className="legend-box red"></div>
+                      <span className="legend-label">Belum Memilih</span>
+                    </div>
+                  </div>                  
                   <div className="table-responsive">
                     <Table striped bordered>
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>Nama</th>
+                          <th>Nama Lengkap</th>
                           <th className="d-none d-md-table-cell">Email</th>
                           <th>Status</th>
                         </tr>
@@ -96,9 +109,9 @@ function Users() {
                         </tr>
                         <tr>
                           <td>5</td>
-                          <td>John Doe</td>
+                          <td>Carl Johnson</td>
                           <td className="d-none d-md-table-cell">
-                            johndoe@example.com
+                            cjsanandreas@example.com
                           </td>
                           <td className="text-success">
                             Sudah Memilih <i className="fa fa-check-circle"></i>
@@ -106,9 +119,9 @@ function Users() {
                         </tr>
                         <tr>
                           <td>6</td>
-                          <td>John Doe</td>
+                          <td>Michael Lawrence</td>
                           <td className="d-none d-md-table-cell">
-                            johndoe@example.com
+                            michlaw@example.com
                           </td>
                           <td className="text-success">
                             Sudah Memilih <i className="fa fa-check-circle"></i>
@@ -116,9 +129,9 @@ function Users() {
                         </tr>
                         <tr>
                           <td>7</td>
-                          <td>John Doe</td>
+                          <td>Obby Smith</td>
                           <td className="d-none d-md-table-cell">
-                            johndoe@example.com
+                            smithob@example.com
                           </td>
                           <td className="text-success">
                             Sudah Memilih <i className="fa fa-check-circle"></i>
@@ -126,9 +139,9 @@ function Users() {
                         </tr>
                         <tr>
                           <td>8</td>
-                          <td>John Doe</td>
+                          <td>Terry Adams</td>
                           <td className="d-none d-md-table-cell">
-                            johndoe@example.com
+                            teradams@example.com
                           </td>
                           <td className="text-success">
                             Sudah Memilih <i className="fa fa-check-circle"></i>

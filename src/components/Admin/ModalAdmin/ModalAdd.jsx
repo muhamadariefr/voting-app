@@ -26,18 +26,32 @@ function ModalAdd() {
               name="gambar"
               placeholder=""
             />
+            <p>Nama Lengkap</p>
             <input
               type="text"
               className="form-control mb-2"
               name="namaKandidat"
               placeholder="Nama Kandidat"
             />
+            <p>Tanggal Lahir</p>
+            <input
+              type="date"
+              className="form-control"
+              value="date"
+            />
+            <p>Status</p>
+            <input
+              type="text"
+              className="form-control"
+              value="Status Jabatan"
+            />
+            <p>Partai</p>
             <input
               type="text"
               className="form-control mb-2"
               name="namaPartai"
               placeholder="Nama Partai"
-            />
+            />      
           </form>
         </Modal.Body>
         <Modal.Footer>

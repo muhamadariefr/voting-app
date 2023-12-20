@@ -6,6 +6,7 @@ import ModalEdit from "./ModalAdmin/ModalEdit";
 import ModalHapus from "./ModalAdmin/ModalHapus";
 import { Row, Col, Card, Table } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+
 function Order() {
   const [toggle, setToggle] = useState(false);
   function Toggle() {
@@ -76,10 +77,10 @@ function Order() {
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>John Doe</td>
-                          <td className="d-none d-md-table-cell">01/01/1990</td>
-                          <td className="d-none d-md-table-cell">Aktif</td>
-                          <td className="d-none d-md-table-cell">Partai A</td>
+                          <td>Anies Baswedan</td>
+                          <td className="d-none d-md-table-cell">7 Mei 1969</td>
+                          <td className="d-none d-md-table-cell">Gubernur DKI Jakarta</td>
+                          <td className="d-none d-md-table-cell">Partai NASDEM</td>
                           <td className="d-flex flex-row justify-content-center border-2">
                             <ModalEdit />
                             <span className="p-1"></span> <ModalHapus />
@@ -87,10 +88,10 @@ function Order() {
                         </tr>
                         <tr>
                           <td>2</td>
-                          <td>Jane Smith</td>
-                          <td className="d-none d-md-table-cell">01/01/1990</td>
-                          <td className="d-none d-md-table-cell">Aktif</td>
-                          <td className="d-none d-md-table-cell">Partai B</td>
+                          <td>Prabowo Subianto</td>
+                          <td className="d-none d-md-table-cell">17 Oktober 1951</td>
+                          <td className="d-none d-md-table-cell">Menteri Pertahanan RI</td>
+                          <td className="d-none d-md-table-cell">Partai GERINDRA</td>
                           <td className="d-flex flex-row justify-content-center border-2">
                             <ModalEdit />
                             <span className="p-1"></span> <ModalHapus />
@@ -98,10 +99,10 @@ function Order() {
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td>Michael Johnson</td>
-                          <td className="d-none d-md-table-cell">01/01/1990</td>
-                          <td className="d-none d-md-table-cell">Aktif</td>
-                          <td className="d-none d-md-table-cell">Partai C</td>
+                          <td>Ganjar Pranowo</td>
+                          <td className="d-none d-md-table-cell">28 Oktober 1968</td>
+                          <td className="d-none d-md-table-cell">Gubernur Jawa Tengah</td>
+                          <td className="d-none d-md-table-cell">Partai PDIP</td>
                           <td className="d-flex flex-row justify-content-center border-2">
                             <ModalEdit />
                             <span className="p-1"></span> <ModalHapus />
@@ -109,10 +110,10 @@ function Order() {
                         </tr>
                         <tr>
                           <td>4</td>
-                          <td>Sarah Lee</td>
-                          <td className="d-none d-md-table-cell">01/01/1990</td>
-                          <td className="d-none d-md-table-cell">Aktif</td>
-                          <td className="d-none d-md-table-cell">Partai D</td>
+                          <td>Muhaimin Iskandar</td>
+                          <td className="d-none d-md-table-cell">24 September 1966</td>
+                          <td className="d-none d-md-table-cell">Ketua PKB</td>
+                          <td className="d-none d-md-table-cell">Partai PKB</td>
                           <td className="d-flex flex-row justify-content-center border-2">
                             <ModalEdit />
                             <span className="p-1"></span> <ModalHapus />
@@ -120,10 +121,10 @@ function Order() {
                         </tr>
                         <tr>
                           <td>5</td>
-                          <td>Robert Williams</td>
-                          <td className="d-none d-md-table-cell">01/01/1990</td>
-                          <td className="d-none d-md-table-cell">Aktif</td>
-                          <td className="d-none d-md-table-cell">Partai E</td>
+                          <td>Mohammad Mahfud Mahmodin</td>
+                          <td className="d-none d-md-table-cell">13 Mei 1957</td>
+                          <td className="d-none d-md-table-cell">Menteri Polhukam</td>
+                          <td className="d-none d-md-table-cell">Partai PKB</td>
                           <td className="d-flex flex-row justify-content-center border-2">
                             <ModalEdit />
                             <span className="p-1"></span>
@@ -132,10 +133,10 @@ function Order() {
                         </tr>
                         <tr>
                           <td>6</td>
-                          <td>Robert Williams</td>
-                          <td className="d-none d-md-table-cell">01/01/1990</td>
-                          <td className="d-none d-md-table-cell">Aktif</td>
-                          <td className="d-none d-md-table-cell">Partai E</td>
+                          <td>Gibran Rakabuming</td>
+                          <td className="d-none d-md-table-cell">1 Oktober 1987</td>
+                          <td className="d-none d-md-table-cell">Walikota Solo</td>
+                          <td className="d-none d-md-table-cell">Partai PDIP</td>
                           <td className="d-flex flex-row justify-content-center border-2">
                             <ModalEdit />
                             <span className="p-1"></span>
@@ -144,10 +145,22 @@ function Order() {
                         </tr>
                         <tr>
                           <td>7</td>
-                          <td>Robert Williams</td>
-                          <td className="d-none d-md-table-cell">01/01/1990</td>
-                          <td className="d-none d-md-table-cell">Aktif</td>
-                          <td className="d-none d-md-table-cell">Partai E</td>
+                          <td>Ridwan Kamil</td>
+                          <td className="d-none d-md-table-cell">4 Oktober 1971</td>
+                          <td className="d-none d-md-table-cell">Gubernur Jawa Barat</td>
+                          <td className="d-none d-md-table-cell">Partai GOLKAR</td>
+                          <td className="d-flex flex-row justify-content-center border-2">
+                            <ModalEdit />
+                            <span className="p-1"></span>
+                            <ModalHapus />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>Sandiaga Uno</td>
+                          <td className="d-none d-md-table-cell">28 Juni 1969</td>
+                          <td className="d-none d-md-table-cell">Menteri Parekraf</td>
+                          <td className="d-none d-md-table-cell">Partai PPP</td>
                           <td className="d-flex flex-row justify-content-center border-2">
                             <ModalEdit />
                             <span className="p-1"></span>
