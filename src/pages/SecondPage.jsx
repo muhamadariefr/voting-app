@@ -6,10 +6,12 @@ import { useNavigate } from "react-router-dom";
 
 const SecondPage = () => {
   let navigate = useNavigate();
-  const [voteShow, setvoteShowSec] = useState(false);
+  const [voteShow, setVoteShowSec] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [selectedCandidate, setSelectedCandidate] = useState(null);  
-
+  const [showThankYouModal, setShowThankYouModal] = useState(false);
+  const [selectedCandidate, setSelectedCandidate] = useState(null);
+  const keyLogin = JSON.parse(localStorage.getItem("keyLogin"));
+  console.log(keyLogin);
 
   const handleShowModal = (candidate) => {
     setSelectedCandidate(candidate);
@@ -20,19 +22,23 @@ const SecondPage = () => {
     setShowModal(false);
   };
 
-  // Vote Show
   const showVote = (candidate) => {
-    setSelectedCandidate(candidate);
-    setvoteShowSec(true);
+    if (keyLogin === 1) {
+      setShowThankYouModal(true);
+    } else {
+      setSelectedCandidate(candidate);
+      setVoteShowSec(true);
+    }
   };
 
   const closeVote = () => {
-    setvoteShowSec(false);
+    setVoteShowSec(false);
   };
 
-  let keyLogin;
-  keyLogin = JSON.parse(localStorage.getItem("keyLogin"));
-  console.log(keyLogin);
+  const closeThankYouModal = () => {
+    setShowThankYouModal(false);
+  };
+
   return (
     <div className="kandidat-page">
       <div className="kandidat min-vh-100">
@@ -51,7 +57,7 @@ const SecondPage = () => {
             </Col>
           </Row>
           <Row data-aos="fade-up" data-aos-duration="1500">
-             {semuakandidat.map((kandidat) => {
+            {semuakandidat.map((kandidat) => {
               return (
                 <Col key={kandidat.id} className="shadow rounded-4">
                   <img
@@ -77,22 +83,26 @@ const SecondPage = () => {
                       <button
                         className="btn btn-primary rounded-1 me-1"
                         onClick={() =>
-                          keyLogin == 1 ? "" : showVote(kandidat)
+                          keyLogin === 1
+                            ? setShowThankYouModal(true)
+                            : showVote(kandidat)
                         }
                       >
-                        {kandidat.vote} <i class="fa-solid fa-thumbs-up"></i>
+                        {kandidat.vote} <i className="fa-solid fa-thumbs-up"></i>
                       </button>
                       <button
                         className="btn btn-danger rounded-1 me-1"
                         onClick={() =>
-                          keyLogin == 1 ? "" : showVote(kandidat)
+                          keyLogin === 1
+                            ? setShowThankYouModal(true)
+                            : showVote(kandidat)
                         }
                       >
-                        <i class="fa-solid fa-thumbs-down"></i>
+                        <i className="fa-solid fa-thumbs-down"></i>
                       </button>
                       <Dropdown>
                         <Dropdown.Toggle variant="light" className="">
-                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                          <i className="fa-solid fa-ellipsis-vertical"></i>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -101,13 +111,13 @@ const SecondPage = () => {
                             className="btn rounded-1"
                             onClick={() => handleShowModal(kandidat)}
                           >
-                            <i class="fa-solid fa-circle-info"></i> Detail
+                            <i className="fa-solid fa-circle-info"></i> Detail
                           </Dropdown.Item>
                           <Dropdown.Item href="#/action-2">
-                            <i class="fa-solid fa-share-nodes"></i> Bagikan
+                            <i className="fa-solid fa-share-nodes"></i> Bagikan
                           </Dropdown.Item>
                           <Dropdown.Item href="#/action-3">
-                            <i class="fa-regular fa-bookmark"></i> Simpan
+                            <i className="fa-regular fa-bookmark"></i> Simpan
                           </Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
@@ -118,8 +128,7 @@ const SecondPage = () => {
             })}
           </Row>
         </Container>
-      </div>
-      <Faq />
+      </div>      
 
       {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal} centered>
@@ -171,6 +180,23 @@ const SecondPage = () => {
         </Modal.Body>
       </Modal>
 
+      {/* Modal "Thank You" */}
+      <Modal show={showThankYouModal} onHide={closeThankYouModal} centered>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+          <div className="text-center">
+            <i
+              className="fa-solid fa-circle-check"
+              style={{ fontSize: "100px", color: "green" }}
+            ></i>
+            <h1 className="fw-bold p-2">Terimakasih!</h1>
+            <p style={{ fontSize: "14px" }}>
+              Anda sudah melakukan Voting.
+            </p>
+          </div>
+        </Modal.Body>
+      </Modal>
+
       {/* Modal Login Dahulu */}
       <Modal show={voteShow} onHide={closeVote} centered>
         <Modal.Header closeButton></Modal.Header>
@@ -185,7 +211,7 @@ const SecondPage = () => {
               Untuk mengakses halaman ini, kamu wajib login terlebih dahulu
             </p>
             <Button variant="primary" onClick={() => navigate("/login")}>
-              Login <i class="fa-solid fa-circle-arrow-right"></i>
+              Login <i className="fa-solid fa-circle-arrow-right"></i>
             </Button>
           </div>
         </Modal.Body>

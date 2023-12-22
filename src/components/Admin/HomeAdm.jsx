@@ -10,42 +10,49 @@ function HomeAdm() {
         <div className="row g-3 my-2">
           <div className="col-md-3">
             <div className="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-              <div className="align-items-center">
+              <div className="align-items-start" style={{ width: "50%" }}>
                 <h3 className="fs-4 fw-bold text-primary">500+</h3>
                 <p className="fs-5">Kandidat</p>
               </div>
-
-              <i className="fa-solid fa-users fs-4 primary-text border rounded secondary-bg p-3"></i>
+              <div className="justify-content-end">
+                <i className="fa-solid fa-users fs-4 primary-text border rounded secondary-bg p-3"></i>
+              </div>
             </div>
           </div>
 
           <div className="col-md-3">
             <div className="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-              <div>
+              <div className="align-items-start" style={{ width: "50%" }}>
                 <h3 className="fs-4 fw-bold text-primary">1500+</h3>
                 <p className="fs-5">Pengguna</p>
               </div>
-              <i className="fa-solid fa-user fs-4 primary-text border rounded secondary-bg p-3"></i>
+              <div className="justify-content-end">
+                <i className="fa-solid fa-user-group fs-4 primary-text rounded secondary-bg p-3"></i>
+              </div>
             </div>
           </div>
 
           <div className="col-md-3">
             <div className="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-              <div>
+              <div className="align-items-start" style={{ width: "50%" }}>
                 <h3 className="fs-4 fw-bold text-primary">8000+</h3>
                 <p className="fs-5">Voting</p>
               </div>
-              <i className="fa-sharp fa-solid fa-check-to-slot fs-4 primary-text border rounded secondary-bg p-3"></i>
+              <div className="justify-content-end">
+                <i className="fa-sharp fa-solid fa-check-to-slot fs-4 primary-text rounded secondary-bg p-3"></i>
+              </div>
             </div>
           </div>
 
           <div className="col-md-3">
             <div className="p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-              <div>
+              <div className="align-items-start" style={{ width: "50%" }}>
                 <h3 className="fs-4 fw-bold text-primary">100%</h3>
-                <p className="fs-5">Realtime Vote</p>
+                <p className="fs-5">Realtime</p>
               </div>
-              <i className="fas fa-chart-line fs-4 primary-text border rounded secondary-bg p-3"></i>
+              <div className="justify-content-end">
+                <i className="fas fa-chart-line fs-4 primary-text rounded secondary-bg p-3"></i>
+              </div>
             </div>
           </div>
         </div>

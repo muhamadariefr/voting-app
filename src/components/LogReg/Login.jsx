@@ -13,12 +13,11 @@ function Login() {
     if (email === "admin@gmail.com" && password === "admin123") {
       // Redirect to the admin dashboard
       navigate("/admin");
+      alert("Anda berhasil login");
     } else if (email === "user@gmail.com" && password === "user123") {
-      // useEffect(() => {
       localStorage.setItem("keyLogin", JSON.stringify((verif = 1)));
-      //  }, [verif]);
-
       navigate("/");
+      alert("Anda berhasil login");
     } else {
       // Handle login failure (e.g., show an error message)
       alert("Login Gagal. Username atau Password tidak valid!");
@@ -103,7 +102,7 @@ function Login() {
 
           <p className="text-start mt-4">
             <Link to="/" className="text-decoration-none ms-2 text-light">
-              <i class="fa-solid fa-arrow-left"></i> Back to Home
+              <i className="fa-solid fa-arrow-left"></i> Back to Home
             </Link>
           </p>
         </form>

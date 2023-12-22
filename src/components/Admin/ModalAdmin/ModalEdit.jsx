@@ -11,7 +11,7 @@ function ModalEdit() {
   return (
     <>
       <Button variant="success" onClick={handleShow}>
-        <i class="fa-solid fa-pen-to-square"></i> Edit
+        <i class="fa-solid fa-pen-to-square"></i> Edit       
       </Button>
 
       <Modal show={show} onHide={handleClose} centered>

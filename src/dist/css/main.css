@@ -487,7 +487,9 @@ header {
     color: var(--color-text);
     font-weight: 500;
     line-height: 2;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .testimonial-page .testimonial .people {
@@ -502,16 +504,14 @@ header {
     color: var(--color-text);
 }
 
-.testimonial-page .testimonial .people h5 {
-    font-weight: 600;
-}
+
 
 .testimonial-page .testimonial .people p {
-    opacity: 50%;
+    opacity: 70%;
 }
 
 .testimonial-page .testimonial .people img {
-    width: 80px;
+    width: 50px;
     border-radius: 100%;
 }
 

@@ -11,7 +11,8 @@ function Signup() {
   const handleRegistration = () => {
     // Simulate user registration logic (no actual data storage)
     // You can add validation or save user data to a state or context if needed
-    // For simplicity, we're just redirecting to the login page
+    // For simplicity, we're just showing an alert and redirecting to the login page
+    alert("Anda berhasil daftar akun");
     navigate("/login");
   };
 

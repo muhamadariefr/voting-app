@@ -17,7 +17,7 @@ const HomePage = () => {
   let navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState(null);
-
+  const [showThankYouModal, setShowThankYouModal] = useState(false);
   const [voteShow, setvoteShow] = useState(false);
 
   const handleShowModal = (candidate) => {
@@ -31,12 +31,20 @@ const HomePage = () => {
 
   // Vote Show
   const showVote = (candidate) => {
-    setSelectedCandidate(candidate);
-    setvoteShow(true);
+    if (keyLogin === 1) {
+      setShowThankYouModal(true);
+    } else {
+      setSelectedCandidate(candidate);
+      setvoteShow(true);
+    }
   };
 
   const closeVote = () => {
     setvoteShow(false);
+  };
+
+  const closeThankYouModal = () => {
+    setShowThankYouModal(false);
   };
 
   let keyLogin;
@@ -121,7 +129,9 @@ const HomePage = () => {
                       <button
                         className="btn btn-primary rounded-1 me-1"
                         onClick={() =>
-                          keyLogin == 1 ? "" : showVote(kandidat)
+                          keyLogin === 1
+                            ? setShowThankYouModal(true)
+                            : showVote(kandidat)
                         }
                       >
                         {kandidat.vote} <i class="fa-solid fa-thumbs-up"></i>
@@ -129,7 +139,9 @@ const HomePage = () => {
                       <button
                         className="btn btn-danger rounded-1 me-1"
                         onClick={() =>
-                          keyLogin == 1 ? "" : showVote(kandidat)
+                          keyLogin === 1
+                            ? setShowThankYouModal(true)
+                            : showVote(kandidat)
                         }
                       >
                         <i class="fa-solid fa-thumbs-down"></i>
@@ -212,7 +224,9 @@ const HomePage = () => {
               {dataSwiper.map((data) => {
                 return (
                   <SwiperSlide key={data.id} className="shadow rounded-5">
-                    <p style={{ textAlign: "center"}} className="desc">{data.desc}</p>
+                    <p style={{ textAlign: "center" }} className="desc">
+                      {data.desc}
+                    </p>
                     <div className="people">
                       <img src={data.image} alt="" />
                       <div>
@@ -248,7 +262,22 @@ const HomePage = () => {
           </div>
         </Modal.Body>
       </Modal>
-
+      
+      {/* Modal "Thank You" */}
+      <Modal show={showThankYouModal} onHide={closeThankYouModal} centered>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+          <div className="text-center">
+            <i
+              className="fa-solid fa-circle-check"
+              style={{ fontSize: "100px", color: "green" }}
+            ></i>
+            <h1 className="fw-bold p-2">Terimakasih!</h1>
+            <p style={{ fontSize: "14px" }}>Anda sudah melakukan Voting.</p>
+          </div>
+        </Modal.Body>
+      </Modal>
+      
       {/* Modal Candidate */}
       <Modal show={showModal} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>

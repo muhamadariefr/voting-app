@@ -45,12 +45,7 @@ const UserProfileModal = ({ show, handleClose, userData }) => {
           <p>Status:</p>
           <h5>{userData.status}</h5>
         </div>        
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
-        </Button>
-      </Modal.Footer>
+      </Modal.Body>      
     </Modal>
   );
 };

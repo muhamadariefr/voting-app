@@ -33,6 +33,7 @@ function Report() {
         { province: "Jawa Timur", totalVoters: 39740125 },
         { province: "Bali", totalVoters: 4290021 },
     ];
+
     const candidateData = [
         {
             name: "Anies Baswedan",
@@ -64,8 +65,10 @@ function Report() {
             rating: 88,
             description: "Very Positive",
         },
-
     ];
+
+    // Sort candidate data by rating (from high to low)
+    const sortedCandidateData = [...candidateData].sort((a, b) => b.rating - a.rating);
 
     return (
         <div className="d-flex">
@@ -152,7 +155,7 @@ function Report() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {candidateData.map((candidate, index) => (
+                                            {sortedCandidateData.map((candidate, index) => (
                                                 <tr key={index}>
                                                     <td>{candidate.name}</td>
                                                     <td>{candidate.totalVoting.toLocaleString()}</td>

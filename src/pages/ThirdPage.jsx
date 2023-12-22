@@ -31,8 +31,8 @@ const ThirdPage = () => {
                   <div className="people">
                     <img src={data.image} alt="" />
                     <div>
-                      <h5 className="mb-1">{data.name}</h5>
-                      <p className="m-0 fw-bold">{data.skill}</p>
+                      <h6 className="mb-1 fw-bold">{data.name}</h6>
+                      <p className="m-0">{data.skill}</p>
                     </div>
                   </div>
                 </Col>
@@ -40,8 +40,7 @@ const ThirdPage = () => {
             })}
           </Row>
         </Container>
-      </div>
-      <Faq />
+      </div>      
     </div>
   );
 };
