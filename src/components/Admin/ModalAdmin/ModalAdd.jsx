@@ -5,7 +5,12 @@ import Modal from "react-bootstrap/Modal";
 function ModalAdd() {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    // You can customize the alert message as needed
+    alert("Data kandidat berhasil ditambahkan");
+    setShow(false);
+  };
+
   const handleShow = () => setShow(true);
 
   return (
@@ -56,7 +61,7 @@ function ModalAdd() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={handleClose}>
-          <i class="fa-solid fa-xmark"></i> Batal
+            <i class="fa-solid fa-xmark"></i> Batal
           </Button>
           <Button variant="primary" onClick={handleClose}>
             <i class="fa-regular fa-floppy-disk"></i> Simpan

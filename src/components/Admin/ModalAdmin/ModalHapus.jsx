@@ -5,7 +5,12 @@ import Modal from "react-bootstrap/Modal";
 function ModalEdit() {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    // Display alert when the "Yakin" button is clicked
+    window.alert("Data Kandidat Berhasil dihapus");
+    setShow(false);
+  };
+
   const handleShow = () => setShow(true);
 
   return (

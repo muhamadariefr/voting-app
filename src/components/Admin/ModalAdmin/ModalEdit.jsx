@@ -8,10 +8,20 @@ function ModalEdit() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleSimpan = () => {
+    // Add your save logic here
+
+    // Show alert when saving is successful
+    alert("Data kandidat berhasil diubah");
+
+    // Close the modal
+    handleClose();
+  };
+
   return (
     <>
       <Button variant="success" onClick={handleShow}>
-        <i class="fa-solid fa-pen-to-square"></i> Edit       
+        <i className="fa-solid fa-pen-to-square"></i> Edit       
       </Button>
 
       <Modal show={show} onHide={handleClose} centered>
@@ -54,10 +64,10 @@ function ModalEdit() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={handleClose}>
-            <i class="fa-solid fa-xmark"></i> Batal
+            <i className="fa-solid fa-xmark"></i> Batal
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            <i class="fa-regular fa-floppy-disk"></i> Simpan
+          <Button variant="primary" onClick={handleSimpan}>
+            <i className="fa-regular fa-floppy-disk"></i> Simpan
           </Button>
         </Modal.Footer>
       </Modal>

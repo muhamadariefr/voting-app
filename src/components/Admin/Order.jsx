@@ -49,12 +49,7 @@ function Order() {
                   <div className="pb-2 d-flex flex-row justify-content-between">
                     <div className="justify-content-start">
                       <ModalAdd />
-                    </div>
-                    <div className="justify-content-end">
-                      <Button variant="outline-primary">
-                        <i class="fa-solid fa-print"></i> Print
-                      </Button>
-                    </div>
+                    </div>                    
                   </div>
                   <div className="table-responsive">
                     <Table striped bordered>

@@ -5,7 +5,12 @@ import Modal from "react-bootstrap/Modal";
 function ModalSetAdm() {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    // Display an alert when the "Simpan" button is clicked
+    alert("Data profil berhasil diubah");
+    setShow(false);
+  };
+
   const handleShow = () => setShow(true);
 
   return (
@@ -75,10 +80,10 @@ function ModalSetAdm() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={handleClose}>
-            <i class="fa-solid fa-xmark"></i> Batal
+            <i className="fa-solid fa-xmark"></i> Batal
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            <i class="fa-regular fa-floppy-disk"></i> Simpan
+            <i className="fa-regular fa-floppy-disk"></i> Simpan
           </Button>
         </Modal.Footer>
       </Modal>
