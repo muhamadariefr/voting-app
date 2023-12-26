@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Modal, Button, Dropdown } from "react-bootstrap";
 import { semuakandidat } from "../data/index";
-import Faq from "../components/FaqComponent";
 import { useNavigate } from "react-router-dom";
+import VoteModal from "../components/Modal/VoteModal";
+import ThankYouModal from "../components/Modal/ThankYouModal";
+import CandidateModal from "../components/Modal/CandidateModal";
 
 const SecondPage = () => {
   let navigate = useNavigate();
@@ -130,92 +132,14 @@ const SecondPage = () => {
         </Container>
       </div>      
 
-      {/* Modal */}
-      <Modal show={showModal} onHide={handleCloseModal} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Data Kandidat</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-md-6">
-                <img
-                  src={selectedCandidate?.image}
-                  alt={selectedCandidate?.title}
-                  className="w-100 mb-3 rounded"
-                />
-              </div>
-              <div className="col-md-6">
-                <h5 className="fw-bold">{selectedCandidate?.title}</h5>
-                <p>{selectedCandidate?.jabatan}</p>
-                <p>{selectedCandidate?.born}</p>
-                <p>{selectedCandidate?.partai}</p>
-                <i
-                  className={selectedCandidate?.star1}
-                  style={{ color: "gold" }}
-                ></i>
-                <i
-                  className={selectedCandidate?.star2}
-                  style={{ color: "gold" }}
-                ></i>
-                <i
-                  className={selectedCandidate?.star3}
-                  style={{ color: "gold" }}
-                ></i>
-                <i
-                  className={selectedCandidate?.star4}
-                  style={{ color: "gold" }}
-                ></i>
-                <i
-                  className={selectedCandidate?.star5}
-                  style={{ color: "gold" }}
-                ></i>
-                <p style={{ fontSize: "14px" }}>Very Positive</p>
-              </div>
-              <p style={{ textAlign: "justify", fontSize: "14px" }}>
-                {selectedCandidate?.desc}
-              </p>
-            </div>
-          </div>
-        </Modal.Body>
-      </Modal>
-
-      {/* Modal "Thank You" */}
-      <Modal show={showThankYouModal} onHide={closeThankYouModal} centered>
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body>
-          <div className="text-center">
-            <i
-              className="fa-solid fa-circle-check"
-              style={{ fontSize: "100px", color: "green" }}
-            ></i>
-            <h1 className="fw-bold p-2">Terimakasih!</h1>
-            <p style={{ fontSize: "14px" }}>
-              Anda sudah melakukan Voting.
-            </p>
-          </div>
-        </Modal.Body>
-      </Modal>
-
-      {/* Modal Login Dahulu */}
-      <Modal show={voteShow} onHide={closeVote} centered>
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body>
-          <div className="text-center">
-            <i
-              className="fa-solid fa-circle-exclamation"
-              style={{ fontSize: "100px", color: "red" }}
-            ></i>
-            <h1 className="fw-bold p-2">Login Dulu!</h1>
-            <p style={{ fontSize: "14px" }}>
-              Untuk mengakses halaman ini, kamu wajib login terlebih dahulu
-            </p>
-            <Button variant="primary" onClick={() => navigate("/login")}>
-              Login <i className="fa-solid fa-circle-arrow-right"></i>
-            </Button>
-          </div>
-        </Modal.Body>
-      </Modal>
+     {/* Modal Login Dahulu */}
+     <VoteModal show={voteShow} closeVote={closeVote} />
+     
+     {/* Modal "Thank You" */}
+     <ThankYouModal show={showThankYouModal} closeThankYouModal={closeThankYouModal} />
+     
+     {/* Modal Candidate */}
+     <CandidateModal show={showModal} handleCloseModal={handleCloseModal} selectedCandidate={selectedCandidate} />      
     </div>
   );
 };

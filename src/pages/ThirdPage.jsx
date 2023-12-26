@@ -1,8 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { testimonial } from "../data/index";
 
-import Faq from "../components/FaqComponent";
-
 const ThirdPage = () => {
   return (
     <div className="testimonial-page">
@@ -40,7 +38,7 @@ const ThirdPage = () => {
             })}
           </Row>
         </Container>
-      </div>      
+      </div>
     </div>
   );
 };
